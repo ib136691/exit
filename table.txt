@@ -1,0 +1,68 @@
+getgenv().exit = {
+Key = '[keyhere]', -- [ replace [keyhere] with your key ]
+    Aimbot = {
+		Settings = {
+			Enabled = true,
+			Targetting = {
+				Target = "C",
+				Point = "UpperTorso"
+			},
+			CurvePatterns = {
+				Pullback =  0.04,
+				Pattern = "Math",
+				Configuration = { 
+					Caclulation = 0.2, 
+					Delta = 0.3, 
+					Rapid = 0.2, 
+					Offset = 0.1, 
+					Controllage = 0.1
+			    },
+				Displacement = { 
+					Enabled = true, 
+					DisplacementX = 0.1, 
+					DisplacementY = 0.1
+				}
+			},
+			Delta = {  -- prediction
+				Vertical = 0.02, 
+				Horizontal = 0.01,
+				Steepness = 0.02
+			},
+            Shake = { 
+				Enabled = false, 
+				Factor = 0.1, 
+				X = 1, 
+				Y = 1, 
+				Z = 1
+			}
+	 	}
+    },
+    Curve = {
+		Enabled = true,
+		Type = "Target", -- Target, FOV
+		Part = "UpperTorso",
+		Amount = 0.156
+    },
+	Resolving = {
+        Enabled = false, -- keep on false its auto
+		PositionMethods = true,
+		PositionMethod = "Direction", -- Direction, Position
+		Delta = 60,
+		Acceleration = 18.2,
+		ThresholdVelocity = 0.192, -- prediction to use while anti is being used KEEP THIS
+		RevertValue = 0.12 -- prediction to revert to when anti isnt being used
+    },
+	Checks = {
+        Death = true,
+        Visible = true,
+        Picked = true
+    },
+	Renders = {
+		Visible = false,
+		Transparency = 0.3,
+		Filled = false,
+		Outline = true,
+		Color = Color3.new(1, 1, 1),
+		Radius = 135
+	}
+}
